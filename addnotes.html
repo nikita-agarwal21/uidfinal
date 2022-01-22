@@ -1,0 +1,67 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notes App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Magic Notes</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="afterlogin.html">back <span class="sr-only"></span></a>
+              </li>
+
+          </ul>
+
+      </div>
+  </nav>
+
+  <br><br>
+<form name='add_quantity' style='background-color:lightblue;width:600px;padding:50px;margin-left:400px'>
+
+  &nbsp &nbsp  enter the item list &nbsp &nbsp  : &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp   &nbsp &nbsp &nbsp &nbsp enter the value
+  <br>
+  <br>
+&nbsp <input type='text' size='20'>&nbsp &nbsp :&nbsp &nbsp  <input onblur="findTotal()" type="text" name="qty" id="qty1"/><br><br>
+&nbsp <input type='text' size='20'>&nbsp &nbsp :&nbsp &nbsp <input onblur="findTotal()" type="text" name="qty" id="qty2"/><br><br>
+&nbsp <input type='text' size='20'>&nbsp &nbsp :&nbsp &nbsp <input onblur="findTotal()" type="text" name="qty" id="qty3"/><br><br>
+&nbsp <input type='text' size='20'>&nbsp &nbsp :&nbsp &nbsp <input onblur="findTotal()" type="text" name="qty" id="qty4"/><br><br>
+&nbsp <input type='text' size='20'>&nbsp &nbsp :&nbsp &nbsp <input onblur="findTotal()" type="text" name="qty" id="qty5"/><br><br>
+&nbsp <input type='text' size='20'>&nbsp &nbsp :&nbsp &nbsp  <input onblur="findTotal()" type="text" name="qty" id="qty6"/><br><br>
+&nbsp <input type='text' size='20'>&nbsp &nbsp :&nbsp &nbsp <input onblur="findTotal()" type="text" name="qty" id="qty7"/><br><br>
+&nbsp <input type='text' size='20'>&nbsp &nbsp :&nbsp &nbsp  <input onblur="findTotal()" type="text" name="qty" id="qty8"/><br><br>
+&nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp   &nbsp &nbsp &nbsp &nbsp
+<b>Total </b> : <input type="text" name="total" id="total"/>
+
+
+    <script type="text/javascript">
+function findTotal(){
+    var arr = document.getElementsByName('qty');
+    var tot=0;
+    for(var i=0;i<arr.length;i++){
+        if(parseInt(arr[i].value))
+            tot += parseInt(arr[i].value);
+    }
+    document.getElementById('total').value = tot;
+}
+</script>
+<br><br>
+</form>
+</body>
+
+
+</html>

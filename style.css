@@ -1,0 +1,15 @@
+body {
+        font-family: Ubuntu;
+    }
+
+    #TotalNotes {
+        color: white;
+        position: relative;
+        top: 10px;
+
+    }
+
+    #OnlineNotes:hover {
+        color: #ecebeb;
+        cursor: pointer;
+    }
